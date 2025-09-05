@@ -599,4 +599,76 @@ window.addEventListener('load', () => {
     }
 });
 
+// Social sharing functionality
+function shareOnFacebook() {
+    const url = encodeURIComponent(window.location.href);
+    const text = encodeURIComponent('Check out Setmabanning Caravan Park in the Lake District!');
+    window.open(`https://www.facebook.com/sharer/sharer.php?u=${url}&quote=${text}`, '_blank', 'width=600,height=400');
+}
+
+function shareOnTwitter() {
+    const url = encodeURIComponent(window.location.href);
+    const text = encodeURIComponent('Setmabanning Caravan Park - Beautiful Lake District camping with views of Blencathra!');
+    window.open(`https://twitter.com/intent/tweet?url=${url}&text=${text}`, '_blank', 'width=600,height=400');
+}
+
+// Add social sharing buttons to hero section
+document.addEventListener('DOMContentLoaded', () => {
+    // Add social sharing functionality to existing social links
+    const facebookLinks = document.querySelectorAll('a[href*="facebook.com"]');
+    facebookLinks.forEach(link => {
+        if (!link.href.includes('Setmabanningfarm')) {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                shareOnFacebook();
+            });
+        }
+    });
+    
+    // Add click tracking for social interactions
+    document.querySelectorAll('.social-link, .social-icon').forEach(link => {
+        link.addEventListener('click', () => {
+            const platform = link.href.includes('facebook') ? 'facebook' : 
+                           link.href.includes('twitter') ? 'twitter' : 
+                           link.href.includes('phone') ? 'phone' : 'email';
+            trackEvent('social_click', { platform: platform });
+        });
+    });
+    
+    // Add testimonial hover effects
+    document.querySelectorAll('.testimonial-card').forEach(card => {
+        card.addEventListener('mouseenter', () => {
+            card.style.transform = 'translateY(-5px) scale(1.02)';
+        });
+        
+        card.addEventListener('mouseleave', () => {
+            card.style.transform = 'translateY(0) scale(1)';
+        });
+    });
+});
+
+// Enhanced analytics tracking
+function trackEvent(eventName, properties = {}) {
+    console.log('Analytics Event:', eventName, properties);
+    // In a real application, this would send data to analytics service
+    // Example: gtag('event', eventName, properties);
+}
+
+// Add scroll-triggered animations for testimonials
+const testimonialObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.style.opacity = '1';
+            entry.target.style.transform = 'translateY(0)';
+        }
+    });
+}, { threshold: 0.1 });
+
+document.querySelectorAll('.testimonial-card').forEach(card => {
+    card.style.opacity = '0';
+    card.style.transform = 'translateY(30px)';
+    card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+    testimonialObserver.observe(card);
+});
+
 console.log('Setmabanning Caravan Park website loaded successfully!');
