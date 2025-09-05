@@ -466,4 +466,137 @@ document.querySelectorAll('#bookingForm input, #bookingForm select').forEach(fie
     });
 });
 
+// Google Maps initialization
+function initMap() {
+    // Setmabanning Caravan Park coordinates
+    const setmabanning = { lat: 54.6011, lng: -3.0522 };
+    
+    // Create map
+    const map = new google.maps.Map(document.getElementById('map'), {
+        zoom: 15,
+        center: setmabanning,
+        mapTypeId: 'hybrid',
+        styles: [
+            {
+                featureType: 'poi',
+                elementType: 'labels',
+                stylers: [{ visibility: 'off' }]
+            }
+        ]
+    });
+    
+    // Create marker
+    const marker = new google.maps.Marker({
+        position: setmabanning,
+        map: map,
+        title: 'Setmabanning Caravan Park',
+        icon: {
+            url: 'data:image/svg+xml;charset=UTF-8,' + encodeURIComponent(`
+                <svg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="20" cy="20" r="18" fill="#2c5530" stroke="white" stroke-width="2"/>
+                    <path d="M20 8 L24 16 L20 20 L16 16 Z" fill="white"/>
+                    <circle cx="20" cy="20" r="3" fill="white"/>
+                </svg>
+            `),
+            scaledSize: new google.maps.Size(40, 40),
+            anchor: new google.maps.Point(20, 20)
+        }
+    });
+    
+    // Create info window
+    const infoWindow = new google.maps.InfoWindow({
+        content: `
+            <div style="padding: 10px; max-width: 250px;">
+                <h3 style="margin: 0 0 10px 0; color: #2c5530; font-size: 16px;">Setmabanning Caravan Park</h3>
+                <p style="margin: 0 0 8px 0; font-size: 14px; color: #333;">
+                    Threlkeld, Keswick, Cumbria<br>
+                    CA12 4TT
+                </p>
+                <p style="margin: 0 0 8px 0; font-size: 14px; color: #666;">
+                    📞 01768 779229
+                </p>
+                <p style="margin: 0; font-size: 12px; color: #888;">
+                    Just off the A66, 4 miles from Keswick
+                </p>
+            </div>
+        `
+    });
+    
+    // Add click listener to marker
+    marker.addListener('click', () => {
+        infoWindow.open(map, marker);
+    });
+    
+    // Add click listener to map
+    map.addListener('click', () => {
+        infoWindow.close();
+    });
+    
+    // Add directions button
+    const directionsButton = document.createElement('div');
+    directionsButton.innerHTML = `
+        <button style="
+            background: #2c5530;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+            margin-top: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        " onclick="openDirections()">
+            📍 Get Directions
+        </button>
+    `;
+    
+    // Add directions button to info window
+    google.maps.event.addListener(infoWindow, 'domready', () => {
+        const infoWindowContent = document.querySelector('.gm-style-iw-c');
+        if (infoWindowContent) {
+            infoWindowContent.appendChild(directionsButton);
+        }
+    });
+}
+
+// Open directions in Google Maps
+function openDirections() {
+    const url = 'https://www.google.com/maps/dir/?api=1&destination=54.6011,-3.0522&travelmode=driving';
+    window.open(url, '_blank');
+}
+
+// Fallback if Google Maps fails to load
+window.addEventListener('load', () => {
+    if (typeof google === 'undefined' || !google.maps) {
+        console.warn('Google Maps failed to load. Using fallback.');
+        const mapElement = document.getElementById('map');
+        if (mapElement) {
+            mapElement.innerHTML = `
+                <div style="
+                    width: 100%;
+                    height: 100%;
+                    background: linear-gradient(135deg, #e9ecef, #dee2e6);
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    color: #666;
+                    text-align: center;
+                    border-radius: 20px;
+                ">
+                    <i class="fas fa-map" style="font-size: 3rem; margin-bottom: 1rem;"></i>
+                    <p>Interactive Map</p>
+                    <p style="font-size: 0.9rem; margin-top: 0.5rem;">
+                        <a href="https://www.google.com/maps/search/Setmabanning+Caravan+Park+Threlkeld+Keswick" 
+                           target="_blank" 
+                           style="color: #2c5530; text-decoration: none;">
+                            View on Google Maps →
+                        </a>
+                    </p>
+                </div>
+            `;
+        }
+    }
+});
+
 console.log('Setmabanning Caravan Park website loaded successfully!');
