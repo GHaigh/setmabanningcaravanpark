@@ -1,0 +1,35 @@
+# Image Placeholders
+
+This directory should contain the following images for the website:
+
+## Hero Images
+- hero-lake-district.jpg (1920x1080) - Main hero background with Lake District landscape
+- about-farm.jpg (600x400) - Farm/campsite view with mountains
+
+## Accommodation Images
+- tent-pitches.jpg (600x400) - Tent camping area
+- campervan-spots.jpg (600x400) - Campervan/caravan pitches
+- holiday-homes.jpg (600x400) - Static caravans/holiday homes
+
+## Gallery Images
+- gallery/lake-district-view.jpg (800x600) - Panoramic view
+- gallery/camping-tents.jpg (800x600) - Tents with mountain backdrop
+- gallery/fire-pit-evening.jpg (800x600) - Evening campfire
+- gallery/hiking-trail.jpg (800x600) - Walking trail
+- gallery/holiday-home.jpg (800x600) - Holiday home exterior
+- gallery/family-camping.jpg (800x600) - Family activities
+
+## Social Media
+- og-image.jpg (1200x630) - Open Graph image for social sharing
+
+## Image Requirements
+- Format: JPG or WebP
+- Quality: High resolution, optimized for web
+- Alt text: Descriptive for accessibility
+- Responsive: Multiple sizes for different screen sizes
+
+## Image Sources
+- Use high-quality stock photos of Lake District
+- Ensure images match the nature/outdoor theme
+- Include diverse representation in people photos
+- Maintain consistent color palette (greens, blues, earth tones)
