@@ -102,6 +102,18 @@ export function Header() {
 
           {/* CTA Buttons */}
           <div className="hidden lg:flex items-center space-x-4">
+            <Link href="/booking-status">
+              <Button
+                variant="ghost"
+                size="sm"
+                className={cn(
+                  'transition-colors duration-300',
+                  isScrolled ? 'text-slate-700 hover:text-nature-600' : 'text-white hover:text-white/80'
+                )}
+              >
+                Check Booking
+              </Button>
+            </Link>
             <Button
               variant="ghost"
               size="sm"
@@ -160,6 +172,15 @@ export function Header() {
                   </button>
                 ))}
                 <div className="px-4 pt-4 space-y-2">
+                  <Link href="/booking-status" className="w-full">
+                    <Button
+                      variant="outline"
+                      size="sm"
+                      className="w-full"
+                    >
+                      Check Booking
+                    </Button>
+                  </Link>
                   <Button
                     variant="outline"
                     size="sm"

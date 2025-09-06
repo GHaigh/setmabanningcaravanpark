@@ -87,7 +87,7 @@ export function Booking() {
     setIsSubmitting(true)
 
     try {
-      const response = await fetch('/api/enquiry', {
+      const response = await fetch('/api/booking', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -102,10 +102,11 @@ export function Booking() {
       })
 
       if (response.ok) {
+        const result = await response.json()
         setIsSubmitted(true)
         toast({
           title: "Booking Enquiry Sent!",
-          description: "Thank you for your enquiry. We'll get back to you within 24 hours.",
+          description: `Booking reference: ${result.bookingNumber}. Check your email for confirmation.`,
           variant: "success",
         })
         reset()
@@ -148,8 +149,8 @@ export function Booking() {
                 </p>
                 <div className="space-y-4">
                   <p className="text-slate-600">
-                    In the meantime, feel free to explore our gallery or contact us directly 
-                    if you have any questions.
+                    You'll receive a confirmation email with your booking reference number. 
+                    Once we confirm availability, you can pay for your booking online.
                   </p>
                   <div className="flex flex-col sm:flex-row gap-4 justify-center">
                     <Button
