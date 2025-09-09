@@ -72,7 +72,7 @@ export function About() {
                 <p className="text-slate-600 leading-relaxed">
                   For over 50 years, we've been welcoming families to experience the natural beauty 
                   of the Lake District. Our working farm setting provides a unique opportunity to 
-                  connect with nature while enjoying modern amenities.
+                  connect with nature while enjoying all the Northern Lakes has to offer.
                 </p>
                 <p className="text-slate-600 leading-relaxed">
                   Whether you're seeking adventure on the nearby peaks of Blencathra, Skiddaw, 
