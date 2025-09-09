@@ -186,15 +186,23 @@ export function Footer() {
             <p className="text-slate-400 text-sm">
               © {currentYear} Setmabanning Caravan Park. All rights reserved.
             </p>
-            <div className="flex space-x-6">
-              <Link href="/privacy" className="text-slate-400 hover:text-white text-sm transition-colors duration-300">
-                Privacy Policy
-              </Link>
-              <Link href="/terms" className="text-slate-400 hover:text-white text-sm transition-colors duration-300">
-                Terms of Service
-              </Link>
-              <Link href="/cookies" className="text-slate-400 hover:text-white text-sm transition-colors duration-300">
-                Cookie Policy
+            <div className="flex flex-wrap items-center space-x-6">
+              <div className="flex space-x-6">
+                <Link href="/privacy" className="text-slate-400 hover:text-white text-sm transition-colors duration-300">
+                  Privacy Policy
+                </Link>
+                <Link href="/terms" className="text-slate-400 hover:text-white text-sm transition-colors duration-300">
+                  Terms of Service
+                </Link>
+                <Link href="/cookies" className="text-slate-400 hover:text-white text-sm transition-colors duration-300">
+                  Cookie Policy
+                </Link>
+              </div>
+              <Link 
+                href="/admin" 
+                className="text-slate-500 hover:text-slate-300 text-xs transition-colors duration-300 px-2 py-1 rounded border border-slate-700 hover:border-slate-600"
+              >
+                Admin
               </Link>
             </div>
           </div>
