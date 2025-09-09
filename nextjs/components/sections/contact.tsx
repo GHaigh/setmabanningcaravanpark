@@ -130,10 +130,6 @@ export function Contact() {
                       <span className="font-medium">{siteConfig.openingHours.season}</span>
                     </div>
                     <div className="flex justify-between">
-                      <span className="text-slate-600">Daily</span>
-                      <span className="font-medium">{siteConfig.openingHours.daily}</span>
-                    </div>
-                    <div className="flex justify-between">
                       <span className="text-slate-600">Check-in</span>
                       <span className="font-medium">{siteConfig.openingHours.checkIn}</span>
                     </div>

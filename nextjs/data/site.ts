@@ -27,7 +27,6 @@ export const siteConfig = {
   
   openingHours: {
     season: 'March - October',
-    daily: '9:00 AM - 5:00 PM',
     checkIn: '3:00 PM',
     checkOut: '11:00 AM'
   },
@@ -128,6 +127,21 @@ export const siteConfig = {
       src: '/images/gallery/family-camping.jpg',
       alt: 'Family enjoying camping activities',
       caption: 'Perfect for family adventures'
+    },
+    {
+      src: '/images/tent-pitches.jpg',
+      alt: 'Spacious tent pitches with electric hook-ups',
+      caption: 'Modern camping facilities with all amenities'
+    },
+    {
+      src: '/images/campervan-spots.jpg',
+      alt: 'Hardstanding pitches for motorhomes and caravans',
+      caption: 'Premium pitches with full facilities'
+    },
+    {
+      src: '/images/holiday-homes.jpg',
+      alt: 'Luxury static caravans with mountain views',
+      caption: 'Home away from home in the Lake District'
     }
   ],
   

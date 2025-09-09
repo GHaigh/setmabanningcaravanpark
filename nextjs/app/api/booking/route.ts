@@ -90,7 +90,7 @@ export async function POST(request: NextRequest) {
                 <p><strong>Departure:</strong> ${departure.toLocaleDateString('en-GB')}</p>
                 <p><strong>Nights:</strong> ${nights}</p>
                 <p><strong>Guests:</strong> ${body.guests}</p>
-                <p><strong>Accommodation:</strong> ${body.accommodationType.replace('-', ' ').replace(/\b\w/g, l => l.toUpperCase())}</p>
+                <p><strong>Accommodation:</strong> ${body.accommodationType.replace('-', ' ').replace(/\b\w/g, (l: string) => l.toUpperCase())}</p>
                 ${body.specialRequests ? `<p><strong>Special Requests:</strong> ${body.specialRequests}</p>` : ''}
                 <p><strong>Estimated Total:</strong> <span class="price">£${totalPrice}</span></p>
               </div>
