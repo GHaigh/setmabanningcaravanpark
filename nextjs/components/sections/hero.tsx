@@ -124,12 +124,15 @@ export function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 1.4 }}
-            className="mt-16 grid grid-cols-3 gap-6 max-w-lg mx-auto"
+            className="mt-16 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6 max-w-4xl mx-auto"
           >
             {[
               { icon: '🐕', label: 'Pet Friendly' },
               { icon: '🚿', label: 'Hot Showers' },
+              { icon: '🏔️', label: 'Nearby Hikes' },
               { icon: '📶', label: 'Free WiFi' },
+              { icon: '🛒', label: 'Farm Shop' },
+              { icon: '🍺', label: 'Local Pubs' },
             ].map((feature, index) => (
               <motion.div
                 key={feature.label}

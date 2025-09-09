@@ -51,6 +51,16 @@ export const siteConfig = {
       icon: 'Wifi',
       title: 'Free WiFi',
       description: 'Stay connected with complimentary internet access'
+    },
+    {
+      icon: 'ShoppingCart',
+      title: 'Farm Shop',
+      description: 'Fresh local produce and essentials available on-site'
+    },
+    {
+      icon: 'Beer',
+      title: 'Local Country Pubs',
+      description: 'Traditional pubs and restaurants within walking distance'
     }
   ],
   
