@@ -53,7 +53,7 @@ export function About() {
               className="text-lg text-slate-600 max-w-3xl mx-auto leading-relaxed"
             >
               Nestled in the heart of the Lake District with breathtaking views of Blencathra, 
-              we offer a perfect blend of traditional camping and modern comfort.
+              we offer a perfect blend of traditional camping and basic comfort.
             </motion.p>
           </div>
 

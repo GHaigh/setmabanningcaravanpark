@@ -9,7 +9,7 @@ The gallery is now set up with placeholder images. To replace them with real pho
 2. **camping-tents.jpg** - Tents pitched with mountain backdrop
 3. **fire-pit-evening.jpg** - Evening campfire with friends and family
 4. **hiking-trail.jpg** - Hiking trail leading to Blencathra
-5. **holiday-home.jpg** - Modern holiday home with mountain views
+5. **holiday-home.jpg** - Traditional holiday home with mountain views
 6. **family-camping.jpg** - Family enjoying camping activities
 
 ### Additional Images (in `/public/images/`)
