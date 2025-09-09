@@ -49,12 +49,12 @@ export const siteConfig = {
       description: 'Modern facilities with hot water and clean amenities'
     },
     {
-      icon: 'Hiking',
+      icon: 'Mountain',
       title: 'Nearby Hikes',
       description: 'Direct access to Blencathra, Skiddaw, and Helvellyn'
     },
     {
-      icon: 'Mountain',
+      icon: 'Trees',
       title: 'Lakeside Views',
       description: 'Stunning panoramic views of the Lake District fells'
     },

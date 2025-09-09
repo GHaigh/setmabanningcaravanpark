@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion'
 import Image from 'next/image'
 import { useInView } from 'react-intersection-observer'
-import { Trees, Flame, Droplets, Hiking, Mountain, Wifi } from 'lucide-react'
+import { Trees, Flame, Droplets, Mountain, Wifi } from 'lucide-react'
 import { Card, CardContent } from '@/components/ui/card'
 import { siteConfig } from '@/data/site'
 
@@ -11,7 +11,6 @@ const iconMap = {
   Trees,
   Flame,
   Droplets,
-  Hiking,
   Mountain,
   Wifi,
 }
