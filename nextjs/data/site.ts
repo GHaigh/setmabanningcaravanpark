@@ -40,7 +40,7 @@ export const siteConfig = {
     {
       icon: 'Droplets',
       title: 'Hot Showers',
-      description: 'Modern facilities with hot water and clean amenities'
+      description: 'Traditional amenities with hot water'
     },
     {
       icon: 'Mountain',
