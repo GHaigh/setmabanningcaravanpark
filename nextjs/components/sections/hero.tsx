@@ -119,33 +119,6 @@ export function Hero() {
             </Button>
           </motion.div>
 
-          {/* Features */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 1.4 }}
-            className="mt-16 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6 max-w-4xl mx-auto"
-          >
-            {[
-              { icon: '🐕', label: 'Pet Friendly' },
-              { icon: '🚿', label: 'Hot Showers' },
-              { icon: '🏔️', label: 'Nearby Hikes' },
-              { icon: '📶', label: 'Free WiFi' },
-              { icon: '🛒', label: 'Farm Shop' },
-              { icon: '🍺', label: 'Local Pubs' },
-            ].map((feature, index) => (
-              <motion.div
-                key={feature.label}
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.6, delay: 1.6 + index * 0.1 }}
-                className="text-center"
-              >
-                <div className="text-3xl mb-2">{feature.icon}</div>
-                <div className="text-white/80 text-sm font-medium">{feature.label}</div>
-              </motion.div>
-            ))}
-          </motion.div>
         </motion.div>
       </div>
 
