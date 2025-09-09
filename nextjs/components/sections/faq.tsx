@@ -38,10 +38,6 @@ export function FAQ() {
       answer: 'Absolutely! We welcome tents, campervans, caravans, and motorhomes. All pitches include electric hook-up, and we have both grass and hardstanding options available.'
     },
     {
-      question: 'What\'s included in the glamping pods?',
-      answer: 'Our glamping pods are fully furnished with heating, lighting, and electrical outlets. They include comfortable beds, storage space, and outdoor seating. Bedding and towels are provided.'
-    },
-    {
       question: 'Do you have a farm shop?',
       answer: 'Yes! Our on-site farm shop stocks essentials, local produce, and camping supplies. We also have recommendations for local country pubs and restaurants within walking distance.'
     },

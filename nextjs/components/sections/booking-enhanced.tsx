@@ -26,8 +26,7 @@ export function BookingEnhanced() {
 
   const accommodationTypes = [
     { id: 'tent-pitches', name: 'Tent Pitches', price: '£15/night', description: 'Grass pitches with electric hook-up' },
-    { id: 'hardstanding-pitches', name: 'Hardstanding Pitches', price: '£35/night', description: 'Hardstanding with electric hook-up' },
-    { id: 'glamping-pods', name: 'Glamping Pods', price: '£85/night', description: 'Furnished pods with heating' }
+    { id: 'hardstanding-pitches', name: 'Hardstanding Pitches', price: '£35/night', description: 'Hardstanding with electric hook-up' }
   ]
 
   const handleSubmit = async (e: React.FormEvent) => {

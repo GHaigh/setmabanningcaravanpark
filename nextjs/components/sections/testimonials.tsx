@@ -38,7 +38,7 @@ export function Testimonials() {
       name: 'Lisa & Tom Brown',
       location: 'Liverpool',
       rating: 5,
-      text: 'Our first glamping experience and it was amazing! The pod was cozy and well-equipped, the views were incredible, and the farm atmosphere was so relaxing. Perfect for a romantic getaway.',
+      text: 'Our first camping experience at Setmabanning and it was amazing! The hardstanding pitch was perfect for our campervan, the views were incredible, and the farm atmosphere was so relaxing. Perfect for a romantic getaway.',
       date: 'June 2024',
       avatar: '💑'
     },

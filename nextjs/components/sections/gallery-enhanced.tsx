@@ -36,14 +36,6 @@ export function GalleryEnhanced() {
       description: 'Hardstanding with electric hook-up'
     },
     {
-      id: 4,
-      src: '/images/glamping-pods.jpg',
-      alt: 'Glamping pods with mountain views',
-      category: 'accommodation',
-      title: 'Glamping Pods',
-      description: 'Furnished pods with heating'
-    },
-    {
       id: 5,
       src: '/images/facilities.jpg',
       alt: 'Clean shower and toilet facilities',
