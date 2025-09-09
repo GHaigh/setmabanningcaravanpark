@@ -123,8 +123,7 @@ export function About() {
                     <Mountain className="h-6 w-6 text-nature-600" />
                   </div>
                   <div>
-                    <div className="font-bold text-slate-900">50+ Years</div>
-                    <div className="text-sm text-slate-600">Family Experience</div>
+                    <div className="font-bold text-slate-900">Family run for over 50 years</div>
                   </div>
                 </div>
               </motion.div>
