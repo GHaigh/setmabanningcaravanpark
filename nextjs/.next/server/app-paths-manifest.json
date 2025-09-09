@@ -1,12 +1,13 @@
 {
   "/_not-found": "app/_not-found.js",
-  "/admin/availability/page": "app/admin/availability/page.js",
-  "/admin/demo-data/page": "app/admin/demo-data/page.js",
-  "/api/enquiry/route": "app/api/enquiry/route.js",
-  "/payment/page": "app/payment/page.js",
-  "/sitemap.xml/route": "app/sitemap.xml/route.js",
-  "/page": "app/page.js",
   "/admin/page": "app/admin/page.js",
+  "/admin/availability/page": "app/admin/availability/page.js",
   "/api/booking/route": "app/api/booking/route.js",
-  "/booking-status/page": "app/booking-status/page.js"
+  "/admin/demo-data/page": "app/admin/demo-data/page.js",
+  "/sitemap.xml/route": "app/sitemap.xml/route.js",
+  "/booking-status/page": "app/booking-status/page.js",
+  "/api/upload-image/route": "app/api/upload-image/route.js",
+  "/page": "app/page.js",
+  "/payment/page": "app/payment/page.js",
+  "/api/enquiry/route": "app/api/enquiry/route.js"
 }

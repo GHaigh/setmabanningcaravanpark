@@ -81,7 +81,7 @@ export function ImageUpload({ onImageUploaded, onImageReplaced }: ImageUploadPro
         // Store image info in localStorage for demo (in production, save to database)
         const imageData = {
           name: result.fileName,
-          url: result.url,
+          url: result.url, // This is now a base64 data URL
           uploadedAt: new Date().toISOString(),
           size: result.size,
           type: result.type
@@ -157,7 +157,7 @@ export function ImageUpload({ onImageUploaded, onImageReplaced }: ImageUploadPro
         // Store image info in localStorage
         const imageData = {
           name: result.fileName,
-          url: result.url,
+          url: result.url, // This is now a base64 data URL
           uploadedAt: new Date().toISOString(),
           size: result.size,
           type: result.type
