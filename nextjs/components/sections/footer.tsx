@@ -2,7 +2,7 @@
 
 import Link from 'next/link'
 import { motion } from 'framer-motion'
-import { Mountain, Phone, Mail, MapPin, Facebook, Instagram, Twitter } from 'lucide-react'
+import { Mountain, Phone, Mail, Home, Facebook, Instagram, Twitter } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { siteConfig } from '@/data/site'
 
@@ -162,7 +162,7 @@ export function Footer() {
                 </div>
               </div>
               <div className="flex items-start space-x-3">
-                <MapPin className="h-5 w-5 text-nature-400 mt-0.5 flex-shrink-0" />
+                <Home className="h-5 w-5 text-nature-400 mt-0.5 flex-shrink-0" />
                 <div>
                   <p className="text-slate-400">
                     {siteConfig.contact.address.line1}<br />

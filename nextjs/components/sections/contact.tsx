@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
-import { Phone, Mail, Clock, Facebook, Instagram, Twitter, MapPin } from 'lucide-react'
+import { Phone, Mail, Clock, Facebook, Instagram, Twitter, Home } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { siteConfig } from '@/data/site'
@@ -100,7 +100,7 @@ export function Contact() {
 
                   <div className="flex items-start space-x-4">
                     <div className="w-12 h-12 bg-nature-100 rounded-full flex items-center justify-center flex-shrink-0">
-                      <MapPin className="h-6 w-6 text-nature-600" />
+                      <Home className="h-6 w-6 text-nature-600" />
                     </div>
                     <div>
                       <h3 className="font-semibold text-slate-900 mb-1">Address</h3>
