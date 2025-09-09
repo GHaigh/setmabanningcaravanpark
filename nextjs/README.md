@@ -125,7 +125,7 @@ The design uses a custom nature-inspired color palette:
 Replace placeholder images in `public/images/`:
 - Hero background: `hero-lake-district.jpg`
 - About section: `about-farm.jpg`
-- Accommodation: `tent-pitches.jpg`, `campervan-spots.jpg`, `holiday-homes.jpg`
+- Accommodation: `tent-pitches.jpg`, `campervan-pitches.jpg`, `holiday-homes.jpg`
 - Gallery: Images in `gallery/` folder
 - Social sharing: `og-image.jpg`
 

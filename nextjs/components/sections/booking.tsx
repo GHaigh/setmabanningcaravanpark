@@ -70,7 +70,7 @@ export function Booking() {
     
     const basePrices = {
       'tent-pitches': 25,
-      'campervan-spots': 35,
+      'campervan-pitches': 35,
       'holiday-homes': 120,
     }
     

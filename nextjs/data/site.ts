@@ -66,13 +66,13 @@ export const siteConfig = {
       available: true
     },
     {
-      id: 'campervan-spots',
-      title: 'Campervan & Caravan Spots',
+      id: 'campervan-pitches',
+      title: 'Campervan & Caravan Pitches',
       description: 'Hardstanding pitches with full facilities. Ideal for motorhomes and caravans with easy access.',
       amenities: ['Hardstanding', 'Electric & water', 'Waste disposal', 'WiFi included'],
       priceRange: 'From £35/night',
       minNights: 2,
-      image: '/images/campervan-spots.jpg',
+      image: '/images/campervan-pitches.jpg',
       available: true
     },
     {
@@ -124,7 +124,7 @@ export const siteConfig = {
       caption: 'Modern camping facilities with all amenities'
     },
     {
-      src: '/images/campervan-spots.jpg',
+      src: '/images/campervan-pitches.jpg',
       alt: 'Hardstanding pitches for motorhomes and caravans',
       caption: 'Premium pitches with full facilities'
     },

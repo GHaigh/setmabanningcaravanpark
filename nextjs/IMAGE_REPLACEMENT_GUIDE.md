@@ -14,7 +14,7 @@ The gallery is now set up with placeholder images. To replace them with real pho
 
 ### Additional Images (in `/public/images/`)
 7. **tent-pitches.jpg** - Spacious tent pitches with electric hook-ups
-8. **campervan-spots.jpg** - Hardstanding pitches for motorhomes and caravans
+8. **campervan-pitches.jpg** - Hardstanding pitches for motorhomes and caravans
 9. **holiday-homes.jpg** - Luxury static caravans with mountain views
 10. **about-farm.jpg** - Working farm experience
 

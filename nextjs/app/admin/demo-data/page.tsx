@@ -45,7 +45,7 @@ export default function DemoDataPage() {
         name: 'Mike Wilson',
         email: 'mike.wilson@email.com',
         phone: '07555 123456',
-        accommodationType: 'campervan-spots',
+        accommodationType: 'campervan-pitches',
         arrivalDate: '2024-09-10',
         departureDate: '2024-09-12',
         guests: 2,
@@ -111,7 +111,7 @@ export default function DemoDataPage() {
       },
       {
         id: '3',
-        accommodationType: 'campervan-spots',
+        accommodationType: 'campervan-pitches',
         startDate: '2024-09-05',
         endDate: '2024-09-07',
         reason: 'Site inspection',
