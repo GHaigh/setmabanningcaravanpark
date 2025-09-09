@@ -140,7 +140,6 @@ export function Hero() {
           >
             {[
               { icon: '🐕', label: 'Pet Friendly' },
-              { icon: '🔥', label: 'Fire Pits' },
               { icon: '🚿', label: 'Hot Showers' },
               { icon: '📶', label: 'Free WiFi' },
             ].map((feature, index) => (

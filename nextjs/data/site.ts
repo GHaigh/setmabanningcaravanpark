@@ -38,11 +38,6 @@ export const siteConfig = {
       description: 'Bring your furry friends along for the adventure'
     },
     {
-      icon: 'Flame',
-      title: 'Fire Pits',
-      description: 'Cozy evenings around the campfire under the stars'
-    },
-    {
       icon: 'Droplets',
       title: 'Hot Showers',
       description: 'Modern facilities with hot water and clean amenities'
@@ -51,11 +46,6 @@ export const siteConfig = {
       icon: 'Mountain',
       title: 'Nearby Hikes',
       description: 'Direct access to Blencathra, Skiddaw, and Helvellyn'
-    },
-    {
-      icon: 'Trees',
-      title: 'Lakeside Views',
-      description: 'Stunning panoramic views of the Lake District fells'
     },
     {
       icon: 'Wifi',
