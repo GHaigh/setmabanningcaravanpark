@@ -172,6 +172,8 @@ export function Contact() {
                   </div>
                 </CardContent>
               </Card>
+            </motion.div>
+
             {/* Quick FAQs */}
             <motion.div
               initial={{ opacity: 0, x: 30 }}
