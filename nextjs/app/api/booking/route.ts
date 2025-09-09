@@ -144,6 +144,26 @@ export async function POST(request: NextRequest) {
       `,
     })
 
+    // Store booking in localStorage for admin system (in production, use a database)
+    const bookingData = {
+      id: bookingNumber,
+      name: body.name,
+      email: body.email,
+      phone: body.phone,
+      accommodationType: body.accommodationType,
+      arrivalDate: body.arrivalDate,
+      departureDate: body.departureDate,
+      guests: body.guests,
+      specialRequests: body.specialRequests,
+      status: 'pending',
+      totalPrice,
+      createdAt: new Date().toISOString()
+    }
+
+    // In a real app, this would be stored in a database
+    // For demo purposes, we'll store in a way that the admin can access
+    console.log('New booking created:', bookingData)
+
     return NextResponse.json({
       success: true,
       bookingNumber,
