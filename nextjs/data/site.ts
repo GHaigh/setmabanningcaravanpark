@@ -1,5 +1,5 @@
 export const siteConfig = {
-  name: 'Setmabanning Caravan Park',
+  name: 'Setmabanning Caravan Park - Test',
   tagline: 'Escape to Nature in the Heart of the Lake District',
   description: 'Family-run caravan park with stunning views of Blencathra. Experience tranquil lakeside camping and explore nearby trails in the beautiful Lake District.',
   url: process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000',
