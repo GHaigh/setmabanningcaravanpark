@@ -76,13 +76,13 @@ export const siteConfig = {
       available: true
     },
     {
-      id: 'campervan-pitches',
-      title: 'Campervan & Caravan Pitches',
+      id: 'hardstanding-pitches',
+      title: 'Hardstanding Pitches',
       description: 'Hardstanding pitches with full facilities. Ideal for motorhomes and caravans with easy access.',
       amenities: ['Hardstanding', 'Electric & water', 'Waste disposal', 'WiFi included'],
       priceRange: 'From £35/night',
       minNights: 2,
-      image: '/images/campervan-pitches.jpg',
+      image: '/images/hardstanding-pitches.jpg',
       available: true
     },
     {

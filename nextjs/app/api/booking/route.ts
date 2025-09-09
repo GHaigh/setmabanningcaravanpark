@@ -35,7 +35,7 @@ export async function POST(request: NextRequest) {
       
       const basePrices = {
         'tent-pitches': 25,
-        'campervan-pitches': 35,
+        'hardstanding-pitches': 35,
         'holiday-homes': 120,
       }
       

@@ -29,7 +29,7 @@ const createPlaceholderImage = (width, height, text, filename) => {
 const additionalImages = [
   { filename: 'about-farm.jpg', text: 'Working Farm', width: 600, height: 400 },
   { filename: 'tent-pitches.jpg', text: 'Tent Pitches', width: 600, height: 400 },
-  { filename: 'campervan-pitches.jpg', text: 'Campervan Pitches', width: 600, height: 400 },
+  { filename: 'hardstanding-pitches.jpg', text: 'Campervan Pitches', width: 600, height: 400 },
   { filename: 'holiday-homes.jpg', text: 'Holiday Homes', width: 600, height: 400 }
 ];
 

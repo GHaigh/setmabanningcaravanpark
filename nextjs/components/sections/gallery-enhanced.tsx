@@ -29,10 +29,10 @@ export function GalleryEnhanced() {
     },
     {
       id: 3,
-      src: '/images/campervan-pitches.jpg',
-      alt: 'Campervan and caravan pitches',
+      src: '/images/hardstanding-pitches.jpg',
+      alt: 'Hardstanding pitches',
       category: 'accommodation',
-      title: 'Campervan Pitches',
+      title: 'Hardstanding Pitches',
       description: 'Hardstanding with electric hook-up'
     },
     {

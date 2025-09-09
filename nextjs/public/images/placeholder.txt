@@ -8,7 +8,7 @@ This directory should contain the following images for the website:
 
 ## Accommodation Images
 - tent-pitches.jpg (600x400) - Tent camping area
-- campervan-pitches.jpg (600x400) - Campervan/caravan pitches
+- hardstanding-pitches.jpg (600x400) - Campervan/caravan pitches
 - holiday-homes.jpg (600x400) - Static caravans/holiday homes
 
 ## Gallery Images
