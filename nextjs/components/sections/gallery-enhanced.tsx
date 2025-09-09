@@ -40,7 +40,7 @@ export function GalleryEnhanced() {
       src: '/images/facilities.jpg',
       alt: 'Clean shower and toilet facilities',
       category: 'facilities',
-      title: 'Modern Facilities',
+      title: 'Basic Facilities',
       description: 'Hot showers and clean amenities'
     },
     {

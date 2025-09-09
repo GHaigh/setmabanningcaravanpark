@@ -68,7 +68,7 @@ export const siteConfig = {
     {
       id: 'tent-pitches',
       title: 'Tent Pitches',
-      description: 'Spacious grass pitches with electric hook-ups available. Perfect for traditional camping with modern conveniences.',
+      description: 'Spacious grass pitches with electric hook-ups available. Perfect for traditional camping with basic conveniences.',
       amenities: ['Electric hook-ups', 'Water access', 'Fire pit area', 'Parking nearby'],
       priceRange: 'From £25/night',
       minNights: 2,
@@ -120,7 +120,7 @@ export const siteConfig = {
     },
     {
       src: '/images/gallery/holiday-home.jpg',
-      alt: 'Modern holiday home with mountain views',
+      alt: 'Traditional holiday home with mountain views',
       caption: 'Comfortable holiday homes with stunning views'
     },
     {
@@ -131,7 +131,7 @@ export const siteConfig = {
     {
       src: '/images/tent-pitches.jpg',
       alt: 'Spacious tent pitches with electric hook-ups',
-      caption: 'Modern camping facilities with all amenities'
+      caption: 'Basic camping facilities with essential amenities'
     },
     {
       src: '/images/campervan-pitches.jpg',
@@ -152,7 +152,7 @@ export const siteConfig = {
     },
     {
       question: 'What facilities are available?',
-      answer: 'We have modern shower blocks, laundry facilities, a small shop, and free WiFi throughout the site.'
+      answer: 'We have basic shower blocks, laundry facilities, a small shop, and free WiFi throughout the site.'
     },
     {
       question: 'Can I have a campfire?',
