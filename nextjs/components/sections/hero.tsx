@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion'
 import Image from 'next/image'
-import { ArrowDown, Star, Calendar, MapPin, Users, Mountain, ShoppingCart, Beer, Heart } from 'lucide-react'
+import { ArrowDown, Star, Calendar, MapPin, Heart } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { siteConfig } from '@/data/site'
 
@@ -101,33 +101,6 @@ export function Hero() {
             </div>
           </motion.div>
 
-          {/* Feature Highlights */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 1.0 }}
-            className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 mb-12 max-w-5xl mx-auto"
-          >
-            {[
-              { icon: Mountain, label: 'Lake District', emoji: '🏔️' },
-              { icon: Users, label: 'Family Friendly', emoji: '👨‍👩‍👧‍👦' },
-              { icon: ShoppingCart, label: 'Farm Shop', emoji: '🛒' },
-              { icon: Beer, label: 'Local Pubs', emoji: '🍺' },
-              { icon: Star, label: '50+ Years', emoji: '⭐' },
-              { icon: MapPin, label: 'Cumbria', emoji: '📍' }
-            ].map((feature, index) => (
-              <motion.div
-                key={feature.label}
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.5, delay: 1.2 + index * 0.1 }}
-                className="flex flex-col items-center p-4 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105"
-              >
-                <div className="text-3xl mb-2">{feature.emoji}</div>
-                <span className="text-sm font-medium text-center text-white/90">{feature.label}</span>
-              </motion.div>
-            ))}
-          </motion.div>
 
           {/* Enhanced CTA Buttons */}
           <motion.div
