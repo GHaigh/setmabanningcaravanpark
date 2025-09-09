@@ -45,7 +45,7 @@ export const siteConfig = {
     {
       icon: 'Mountain',
       title: 'Nearby Hikes',
-      description: 'Direct access to Blencathra, Skiddaw, and Helvellyn'
+      description: 'Close to the popular lakeland fells, Blencathra, Skiddaw, and Helvellyn'
     },
     {
       icon: 'Wifi',
@@ -116,7 +116,7 @@ export const siteConfig = {
     {
       src: '/images/gallery/hiking-trail.jpg',
       alt: 'Hiking trail leading to Blencathra',
-      caption: 'Direct access to famous Lake District peaks'
+      caption: 'Close to the popular lakeland fells, Blencathra'
     },
     {
       src: '/images/gallery/holiday-home.jpg',
