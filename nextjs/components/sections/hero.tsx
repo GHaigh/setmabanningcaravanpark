@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion'
 import Image from 'next/image'
-import { ArrowDown, MapPin, Star } from 'lucide-react'
+import { ArrowDown, Star } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { siteConfig } from '@/data/site'
 
@@ -52,18 +52,6 @@ export function Hero() {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="max-w-4xl mx-auto"
         >
-          {/* Location Badge */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-            className="inline-flex items-center space-x-2 bg-white/20 backdrop-blur-sm border border-white/30 rounded-full px-4 py-2 mb-8"
-          >
-            <MapPin className="h-4 w-4 text-white" />
-            <span className="text-white text-sm font-medium">
-              {siteConfig.contact.address.line2}, {siteConfig.contact.address.line3}
-            </span>
-          </motion.div>
 
           {/* Main Headline */}
           <motion.h1

@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
-import { MapPin, Phone, Mail, Clock, Facebook, Instagram, Twitter } from 'lucide-react'
+import { Phone, Mail, Clock, Facebook, Instagram, Twitter } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { siteConfig } from '@/data/site'
@@ -172,47 +172,13 @@ export function Contact() {
                   </div>
                 </CardContent>
               </Card>
-            </motion.div>
-
-            {/* Map */}
+            {/* Quick FAQs */}
             <motion.div
               initial={{ opacity: 0, x: 30 }}
               animate={inView ? { opacity: 1, x: 0 } : {}}
               transition={{ duration: 0.8, delay: 0.8 }}
               className="space-y-6"
             >
-              <Card>
-                <CardHeader>
-                  <CardTitle className="flex items-center space-x-2">
-                    <MapPin className="h-5 w-5 text-nature-600" />
-                    <span>Find Us</span>
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <div className="aspect-video bg-slate-200 rounded-2xl flex items-center justify-center">
-                    <div className="text-center">
-                      <MapPin className="h-12 w-12 text-slate-400 mx-auto mb-4" />
-                      <p className="text-slate-600 mb-2">Interactive Map</p>
-                      <p className="text-sm text-slate-500">
-                        {siteConfig.contact.address.line2}, {siteConfig.contact.address.line3}
-                      </p>
-                      <Button
-                        variant="outline"
-                        size="sm"
-                        className="mt-4"
-                        onClick={() => window.open(
-                          `https://www.google.com/maps/search/${encodeURIComponent(siteConfig.contact.address.line1 + ' ' + siteConfig.contact.address.line2 + ' ' + siteConfig.contact.address.line3)}`,
-                          '_blank'
-                        )}
-                      >
-                        Open in Maps
-                      </Button>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-
-              {/* Quick FAQs */}
               <Card>
                 <CardHeader>
                   <CardTitle>Quick Questions</CardTitle>
