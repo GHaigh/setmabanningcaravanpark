@@ -124,7 +124,7 @@ export function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 1.4 }}
-            className="mt-16 grid grid-cols-2 sm:grid-cols-4 gap-6 max-w-2xl mx-auto"
+            className="mt-16 grid grid-cols-3 gap-6 max-w-lg mx-auto"
           >
             {[
               { icon: '🐕', label: 'Pet Friendly' },
