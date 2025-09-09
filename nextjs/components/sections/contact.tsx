@@ -11,7 +11,7 @@ export function Contact() {
   const [ref, inView] = useInView({
     triggerOnce: true,
     threshold: 0.1,
-  })
+  });
 
   return (
     <section id="contact" className="py-16 sm:py-20 lg:py-24 bg-slate-50">
