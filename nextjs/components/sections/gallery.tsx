@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import Image from 'next/image'
 import { useInView } from 'react-intersection-observer'
@@ -10,10 +10,21 @@ import { siteConfig } from '@/data/site'
 
 export function Gallery() {
   const [selectedImage, setSelectedImage] = useState<number | null>(null)
+  const [galleryImages, setGalleryImages] = useState(siteConfig.gallery)
   const [ref, inView] = useInView({
     triggerOnce: true,
     threshold: 0.1,
   })
+
+  // Load replaced images from localStorage
+  useEffect(() => {
+    const replacements = JSON.parse(localStorage.getItem('galleryReplacements') || '{}')
+    const updatedGallery = siteConfig.gallery.map((image, index) => ({
+      ...image,
+      src: replacements[index] || image.src
+    }))
+    setGalleryImages(updatedGallery)
+  }, [])
 
   const openLightbox = (index: number) => {
     setSelectedImage(index)
@@ -25,13 +36,13 @@ export function Gallery() {
 
   const nextImage = () => {
     if (selectedImage !== null) {
-      setSelectedImage((selectedImage + 1) % siteConfig.gallery.length)
+      setSelectedImage((selectedImage + 1) % galleryImages.length)
     }
   }
 
   const prevImage = () => {
     if (selectedImage !== null) {
-      setSelectedImage(selectedImage === 0 ? siteConfig.gallery.length - 1 : selectedImage - 1)
+      setSelectedImage(selectedImage === 0 ? galleryImages.length - 1 : selectedImage - 1)
     }
   }
 
@@ -71,7 +82,7 @@ export function Gallery() {
 
           {/* Gallery Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            {siteConfig.gallery.map((image, index) => (
+            {galleryImages.map((image, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, scale: 0.8 }}
@@ -145,8 +156,8 @@ export function Gallery() {
                   {/* Image */}
                   <div className="relative aspect-video rounded-2xl overflow-hidden">
                     <Image
-                      src={siteConfig.gallery[selectedImage].src}
-                      alt={siteConfig.gallery[selectedImage].alt}
+                      src={galleryImages[selectedImage].src}
+                      alt={galleryImages[selectedImage].alt}
                       fill
                       className="object-contain"
                       priority
@@ -156,14 +167,14 @@ export function Gallery() {
                   {/* Caption */}
                   <div className="absolute bottom-4 left-4 right-4 text-white">
                     <p className="text-lg font-medium">
-                      {siteConfig.gallery[selectedImage].caption}
+                      {galleryImages[selectedImage].caption}
                     </p>
                   </div>
 
                   {/* Image Counter */}
                   <div className="absolute top-4 left-4 bg-black/50 backdrop-blur-sm rounded-full px-3 py-1">
                     <span className="text-white text-sm font-medium">
-                      {selectedImage + 1} / {siteConfig.gallery.length}
+                      {selectedImage + 1} / {galleryImages.length}
                     </span>
                   </div>
                 </motion.div>

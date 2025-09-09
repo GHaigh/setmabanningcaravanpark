@@ -7,6 +7,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { AdminNav } from '@/components/admin-nav'
+import { ImageUpload } from '@/components/admin/image-upload'
 import { siteConfig } from '@/data/site'
 
 interface Booking {
@@ -32,6 +33,7 @@ export default function AdminPage() {
   const [bookings, setBookings] = useState<Booking[]>([])
   const [selectedAccommodation, setSelectedAccommodation] = useState('all')
   const [selectedStatus, setSelectedStatus] = useState('all')
+  const [activeTab, setActiveTab] = useState('bookings')
   const router = useRouter()
 
   // Simple authentication check
@@ -111,6 +113,24 @@ export default function AdminPage() {
       style: 'currency',
       currency: 'GBP'
     }).format(price)
+  }
+
+  const handleImageUploaded = (imageName: string, imageUrl: string) => {
+    // In a real app, this would update the database
+    console.log('Image uploaded:', imageName, imageUrl)
+    // You could trigger a refresh of the gallery here
+  }
+
+  const handleImageReplaced = (galleryIndex: number, newImageUrl: string) => {
+    // In a real app, this would update the database
+    console.log('Image replaced:', galleryIndex, newImageUrl)
+    // Store the replacement in localStorage for demo
+    const replacements = JSON.parse(localStorage.getItem('galleryReplacements') || '{}')
+    replacements[galleryIndex] = newImageUrl
+    localStorage.setItem('galleryReplacements', JSON.stringify(replacements))
+    
+    // Trigger a page refresh to show the new image
+    window.location.reload()
   }
 
   if (isLoading) {
@@ -194,7 +214,38 @@ export default function AdminPage() {
         {/* Navigation */}
         <AdminNav />
 
-        {/* Stats Cards */}
+        {/* Tab Navigation */}
+        <div className="mb-6">
+          <div className="border-b border-slate-200">
+            <nav className="-mb-px flex space-x-8">
+              <button
+                onClick={() => setActiveTab('bookings')}
+                className={`py-2 px-1 border-b-2 font-medium text-sm ${
+                  activeTab === 'bookings'
+                    ? 'border-nature-500 text-nature-600'
+                    : 'border-transparent text-slate-500 hover:text-slate-700 hover:border-slate-300'
+                }`}
+              >
+                Bookings
+              </button>
+              <button
+                onClick={() => setActiveTab('images')}
+                className={`py-2 px-1 border-b-2 font-medium text-sm ${
+                  activeTab === 'images'
+                    ? 'border-nature-500 text-nature-600'
+                    : 'border-transparent text-slate-500 hover:text-slate-700 hover:border-slate-300'
+                }`}
+              >
+                Image Management
+              </button>
+            </nav>
+          </div>
+        </div>
+
+        {/* Content based on active tab */}
+        {activeTab === 'bookings' && (
+          <>
+            {/* Stats Cards */}
         <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
           <Card>
             <CardContent className="p-6">
@@ -359,6 +410,25 @@ export default function AdminPage() {
             )}
           </CardContent>
         </Card>
+          </>
+        )}
+
+        {activeTab === 'images' && (
+          <Card>
+            <CardHeader>
+              <CardTitle>Image Management</CardTitle>
+              <p className="text-slate-600">
+                Upload and manage images for your website gallery and other sections.
+              </p>
+            </CardHeader>
+            <CardContent>
+              <ImageUpload 
+                onImageUploaded={handleImageUploaded} 
+                onImageReplaced={handleImageReplaced}
+              />
+            </CardContent>
+          </Card>
+        )}
       </div>
     </div>
   )
